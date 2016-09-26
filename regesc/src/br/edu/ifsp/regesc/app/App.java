@@ -1,34 +1,27 @@
 
 package br.edu.ifsp.regesc.app;
 
-import br.edu.ifsp.regesc.dao.StudentDAO;
-import br.edu.ifsp.regesc.models.Student;
-import java.util.ArrayList;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 
-public class App {
-    public static void main(String[] args) {     
-//        Student student = new Student("Bolsonaro Mito!", 20);
-//        System.out.println(student);
-//        
-//        StudentDAO dao = new StudentDAO();
-//        dao.insert(student);
-//        
-//        System.out.println(student);
-//        
-//        System.out.println("Deu bom!");
-
-        StudentDAO dao = new StudentDAO();
-        ArrayList<Student> studentList = dao.findAll();
+public class App extends Application {
+	@Override
+	public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/br/edu/ifsp/regesc/views/VBoxApp.fxml"));
         
+        Scene scene = new Scene(root);
         
-        System.out.println("*******************");
-        
-        for (Student student : studentList) {
-            System.out.println("----");
-            System.out.println(student);
-            System.out.println("----");
-        }
-        System.out.println("*******************");
+        stage.setScene(scene);
+        stage.setTitle("RegEsc - Registros Escolares");
+        stage.show();
+	}
+	
+	
+	public static void main(String[] args) {     
+		launch(args);
     }
 }

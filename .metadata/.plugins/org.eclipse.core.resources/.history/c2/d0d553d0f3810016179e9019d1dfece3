@@ -1,0 +1,13 @@
+
+package br.edu.ifsp.regesc.app;
+
+import br.edu.ifsp.regesc.dao.StudentDAO;
+import br.edu.ifsp.regesc.models.Student;
+import java.util.ArrayList;
+
+
+public class App extends Application {
+    public static void main(String[] args) {     
+
+    }
+}

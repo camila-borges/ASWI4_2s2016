@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;regesc/src/br/edu/ifsp/regesc/views/FXMLVBoxApp.fxml&apos; to &apos;VBoxApp.fxml&apos;" description="Rename resource &apos;FXMLVBoxApp.fxml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/br/edu/ifsp/regesc/views/FXMLVBoxApp.fxml" name="VBoxApp.fxml" stamp="1474679672663" updateReferences="true"/>
+</session>

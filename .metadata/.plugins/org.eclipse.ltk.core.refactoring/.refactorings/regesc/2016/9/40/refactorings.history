@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ConnectionFactory.java&apos; to &apos;P3/src/p3.db&apos;&#x0A;- Original project: &apos;regesc&apos;&#x0A;- Destination element: &apos;P3/src/p3.db&apos;&#x0A;- Original element: &apos;br.edu.ifsp.regesc.db.ConnectionFactory.java&apos;" description="Copy compilation unit" destination="=P3/src&lt;p3.db" element1="/src&lt;br.edu.ifsp.regesc.db{ConnectionFactory.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1475159966666" units="1" version="1.0"/>
+</session>

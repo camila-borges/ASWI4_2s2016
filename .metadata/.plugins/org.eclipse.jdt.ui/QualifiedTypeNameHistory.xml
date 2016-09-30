@@ -4,4 +4,15 @@
 <fullyQualifiedTypeName name="javafx.scene.Parent"/>
 <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
 <fullyQualifiedTypeName name="javafx.scene.Scene"/>
+<fullyQualifiedTypeName name="p3.db.ConnectionFactory"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Statement"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="p3.dao.MusicaDAO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="p3.models.Musica"/>
+<fullyQualifiedTypeName name="p3.models.Playlist"/>
+<fullyQualifiedTypeName name="p3.dao.PlaylistDAO"/>
 </qualifiedTypeNameHistroy>

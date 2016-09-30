@@ -85,4 +85,10 @@ public class FXMLAnchorPaneCadastrosAlunosController implements Initializable {
             labelIdade.setText(String.valueOf(student.getAge()));
         }
     }
+    
+    
+    @FXML
+    public void handleButtonInserir() {
+        
+    }
 }

@@ -1,0 +1,7 @@
+package br.edu.ifsp.regesc.controllers;
+
+import javafx.fxml.Initializable;
+
+public class VBoaxAppController implements Initializable {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.edu.ifsp.regesc.controllers.VBoaxAppController&apos; to &apos;VBoxAppController&apos;&#x0A;- Original project: &apos;regesc&apos;&#x0A;- Original element: &apos;br.edu.ifsp.regesc.controllers.VBoaxAppController&apos;&#x0A;- Renamed element: &apos;br.edu.ifsp.regesc.controllers.VBoxAppController&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;VBoaxAppController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.edu.ifsp.regesc.controllers{VBoaxAppController.java[VBoaxAppController" matchStrategy="1" name="VBoxAppController" qualified="false" references="true" similarDeclarations="false" stamp="1475282122150" textual="false" version="1.0"/>
+</session>

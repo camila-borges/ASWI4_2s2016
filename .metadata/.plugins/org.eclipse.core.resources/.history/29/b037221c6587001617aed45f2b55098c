@@ -1,6 +1,0 @@
-INSERT INTO Student(name, idade) VALUES("Marta Suplicy", 60);
-INSERT INTO Student(name, idade) VALUES("Luzia Herondina", 80);
-INSERT INTO Student(name, idade) VALUES("Fernando Haddad", 53);
-INSERT INTO Student(name, idade) VALUES("João Doria", 53);
-INSERT INTO Student(name, idade) VALUES("Major Olimpo", 55);
-INSERT INTO Student(name, idade) VALUES("João do Botijao", 40);

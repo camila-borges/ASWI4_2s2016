@@ -1,0 +1,128 @@
+package br.edu.ifsp.regesc.controllers;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
+import br.edu.ifsp.regesc.dao.StudentDAO;
+import br.edu.ifsp.regesc.models.Student;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+public class AnchorPaneAlunosController implements Initializable {
+	// sempre que for preciso associar um elemento gráfico ou um evento de um botão, etc,
+	// da view para o controller, manter o mesmo nome atribuído no fx:id do elemento,
+	// e colocar a anotação @FMXL aqui no controller
+	@FXML
+	private TableView<Student> tableViewAlunos;
+	@FXML
+	private TableColumn<Student, Long> tableColumnId;
+	@FXML
+	private TableColumn<Student, String> tableColumnNome;
+	@FXML
+	private Label labelId;
+	@FXML
+	private Label labelNome;
+	@FXML
+	private Label labelIdade;
+	@FXML
+	private Button buttonCadastrar;
+	@FXML
+	private Button buttonEditar;
+	@FXML
+	private Button buttonApagar;
+	
+	
+	
+	
+	private ArrayList<Student> studentList;
+	private ObservableList<Student> studentObservableList;
+	private StudentDAO dao;
+	
+	
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+		this.dao = new StudentDAO();
+		
+		loadTableViewAlunos();
+		
+		// Listen acionado diante de quaisquer alterações na seleção de itens do TableView
+        tableViewAlunos.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> selectItemTableViewAlunos(newValue));
+	}
+	
+	
+	
+	public void loadTableViewAlunos() {
+		this.studentList = this.dao.findAll();
+		
+		// a string é o nome do atributo da classe do objeto, e
+		// é OBRIGATÓRIO ter um getter para o atributo, seguindo a convenção java
+		tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
+		tableColumnNome.setCellValueFactory(new PropertyValueFactory<>("name"));
+		
+		// convert um ArrayList para um ObservableList, que é o tipo List que o JavaFX
+		// "enxerga"
+		this.studentObservableList = FXCollections.observableArrayList(this.studentList);
+		this.tableViewAlunos.setItems(this.studentObservableList);
+	}
+		
+	
+	public void selectItemTableViewAlunos(Student student) {
+		if (student != null) {
+			// imprime setando o texto de cada label
+			this.labelId.setText(String.valueOf(student.getId()));
+			this.labelNome.setText(student.getName());
+			this.labelIdade.setText(String.valueOf(student.getAge()));
+		}
+	}
+	
+	
+	@FXML
+	public void handleButtonCadastrar() {
+		System.out.println("dhasdhasdjashdkajhdkajshdkajsdhas");
+		Student student = new Student();
+		showAnchorPaneCadastroAlunosDialog(student);
+	}
+	
+	
+	public void showAnchorPaneCadastroAlunosDialog(Student student) {
+		FXMLLoader loader = new FXMLLoader();
+		// carregando o layout do dialog
+		loader.setLocation(AnchorPaneCadastroAlunosDialogController.class.getResource("/br/edu/ifsp/regesc/views/AnchorPaneCadastroAlunosDialog.fxml"));
+		// cria uma página (anchor pane) que carregará o layout/tela especificado acima
+		AnchorPane page = (AnchorPane) loader.load();
+		
+		// para que a tela apareça para o usuário, é preciso fazer os comandos abaixo
+		Stage dialogStage = new Stage();
+		dialogStage.setTitle("Cadastro de Clientes");
+		Scene scene = new Scene(page);
+		dialogStage.setScene(scene);
+		
+		
+		// atribuindo o estudante no controller
+		AnchorPaneCadastroAlunosDialogController controller = loader.getController();
+		controller.setDialogStage(dialogStage);
+		controller.setStudent(student);
+		
+		// mostra o dialog e espera até que o usuário feche
+		dialogStage.showAndWait();
+	}
+}
+
+
+
+
+
+
+

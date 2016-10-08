@@ -1,0 +1,22 @@
+package br.edu.ifsp.regesc.controllers;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import br.edu.ifsp.regesc.models.Student;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableView;
+
+public class AnchorPaneAlunosController implements Initializable {
+	@FXML
+	private TableView<Student> tableViewAlunos;
+	
+	
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		
+	}
+
+}

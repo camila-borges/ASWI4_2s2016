@@ -1,0 +1,29 @@
+package br.edu.ifsp.regesc.controllers;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
+import br.edu.ifsp.regesc.models.Student;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableView;
+
+public class AnchorPaneAlunosController implements Initializable {
+	// sempre que for preciso associar um elemento gráfico ou um evento de um botão, etc,
+	// da view para o controller, manter o mesmo nome 
+	@FXML
+	private TableView<Student> tableViewAlunos;
+	
+	
+	
+	private ArrayList<Student> studentList;
+	
+	
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		
+	}
+
+}
